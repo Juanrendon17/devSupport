@@ -11,7 +11,6 @@ final class SmokeTest extends TestCase
 
     public function testCanIncludeDb(): void
     {
-        // Simple smoke test: verify db.php can be included
         $this->assertFileExists('/var/www/html/db.php');
     }
 

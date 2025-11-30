@@ -45,7 +45,6 @@ final class ApiEndpointsTest extends TestCase
                 ]
             ]);
             
-            // Should return 200 or 201
             $this->assertGreaterThanOrEqual(200, $response->getStatusCode());
             $this->assertLessThan(400, $response->getStatusCode(), 
                 'Expected success status, got ' . $response->getStatusCode());
