@@ -9,13 +9,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the Docker images...'
-                sh 'docker-compose build api db'
+                sh 'docker-compose build'
             }
         }
         stage('Start Services') {
             steps {
                 echo 'Starting the application services...'
-                sh 'docker-compose up -d'
+                sh 'docker-compose up -d api db'
             }
         }
         stage('Test API') {
